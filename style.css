@@ -1,0 +1,299 @@
+/* ============================================
+   Daily Attendance Tracker - Styles
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ============================================
+   Container
+   ============================================ */
+
+.container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Header
+   ============================================ */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    color: #333;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* ============================================
+   Summary Card
+   ============================================ */
+
+.summary-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+
+.summary-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.summary-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.summary-value {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.summary-separator {
+    font-size: 28px;
+    font-weight: 300;
+    opacity: 0.6;
+}
+
+/* ============================================
+   Students Section
+   ============================================ */
+
+.students-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.student-card {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.student-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.student-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.student-status {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+/* Status Styling */
+
+.student-status.unmarked {
+    background: #e9ecef;
+    color: #6c757d;
+}
+
+.student-status.present {
+    background: #d4edda;
+    color: #155724;
+}
+
+.student-status.absent {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* ============================================
+   Student Actions
+   ============================================ */
+
+.student-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    color: #666;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Present Button */
+
+.btn-present {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-present:hover {
+    background: #d4edda;
+}
+
+.btn-present.active {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+/* Absent Button */
+
+.btn-absent {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-absent:hover {
+    background: #f8d7da;
+}
+
+.btn-absent.active {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .summary-card {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .summary-value {
+        font-size: 24px;
+    }
+
+    .student-card {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .student-info {
+        width: 100%;
+    }
+
+    .student-actions {
+        width: 100%;
+    }
+
+    .btn {
+        flex: 1;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    .student-name {
+        font-size: 16px;
+    }
+}

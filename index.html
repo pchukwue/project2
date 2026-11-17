@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Attendance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Daily Attendance Tracker</h1>
+        </header>
+
+        <!-- Summary Card -->
+        <div class="summary-card">
+            <div class="summary-stat">
+                <span class="summary-label">Present</span>
+                <span class="summary-value" id="presentCount">0</span>
+            </div>
+            <div class="summary-separator">/</div>
+            <div class="summary-stat">
+                <span class="summary-label">Total Students</span>
+                <span class="summary-value" id="totalCount">3</span>
+            </div>
+        </div>
+
+        <!-- Students List -->
+        <section class="students-section">
+            <div class="student-card" data-student-id="john">
+                <div class="student-info">
+                    <h2 class="student-name">John</h2>
+                    <span class="student-status unmarked">Unmarked</span>
+                </div>
+                <div class="student-actions">
+                    <button class="btn btn-present" data-action="present">Present</button>
+                    <button class="btn btn-absent" data-action="absent">Absent</button>
+                </div>
+            </div>
+
+            <div class="student-card" data-student-id="mary">
+                <div class="student-info">
+                    <h2 class="student-name">Mary</h2>
+                    <span class="student-status unmarked">Unmarked</span>
+                </div>
+                <div class="student-actions">
+                    <button class="btn btn-present" data-action="present">Present</button>
+                    <button class="btn btn-absent" data-action="absent">Absent</button>
+                </div>
+            </div>
+
+            <div class="student-card" data-student-id="peter">
+                <div class="student-info">
+                    <h2 class="student-name">Peter</h2>
+                    <span class="student-status unmarked">Unmarked</span>
+                </div>
+                <div class="student-actions">
+                    <button class="btn btn-present" data-action="present">Present</button>
+                    <button class="btn btn-absent" data-action="absent">Absent</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
